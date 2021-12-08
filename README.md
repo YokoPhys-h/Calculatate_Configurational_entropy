@@ -1,0 +1,2 @@
+# Configurational Entropy in Julia
+This repository include codes for Configurational Entropy produced by [Gleiser et al](https://arxiv.org/ct?url=https%3A%2F%2Fdx.doi.org%2F10.1016%2Fj.physletb.2012.05.064&v=07d93dad).

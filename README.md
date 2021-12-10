@@ -1,17 +1,31 @@
+
 # Configurational Entropy in Julia
 This repository include Julia language codes for Configurational Entropy (CE) produced by [Gleiser et al](https://arxiv.org/ct?url=https%3A%2F%2Fdx.doi.org%2F10.1016%2Fj.physletb.2012.05.064&v=07d93dad). 
+
 
 **Note that this program can calculate CE whether the data is given as a function or as numerical data, but since it uses FFT, it can only be applied to periodic functions!** 
 
 # How to use
 This program is written in the Julia language, and calculates CE by simply entering a function or numerical data. 
 
+
+## Table of Contents
+1. [Load the function to be used for the calculation in Julia.](#anchor1)
+2. [Define function or input numerical data](#anchor2)
+3. [Calculate Fast Fourier TransForm](#anchor3)
+4. [Calculate Configurational Entropy](#anchor4)
+
+<a id="anchor1"></a>
+
 ## 1. Load the function to be used for the calculation in Julia.
 In this section, All you have to do is `ctrl+enter` from the top to the separator line.
 ![](images/2021-12-10-15-51-43.png)
 
+<a id="anchor2"></a>
+
 ## 2. Define function or input numerical data
 If you want to calculate the CE per parameter from a function, read 1-1; if you want to calculate the CE per parameter from numerical data, read 1-2.
+
 
 ### 2-1. Define a function to calculate the CE for each parameter.
 Follow the example below to enter a function in `CE_func(<variable>,<parameter>)` that varies with parameters. The first argument should be the argument (variable) of the function you want to use, the second argument should be the parameter you want to change.
@@ -41,7 +55,10 @@ Then, input the **full path** of the data into the `input_file function("C:\\hog
 
 ![](images/2021-12-10-16-49-12.png)
 
-## Calculate Fast Fourier TransForm
+
+<a id="anchor3"></a>
+
+## 3. Calculate Fast Fourier TransForm
 To calculate FFT, Enter test or test_d into the `fft(<test or test_d>)` function. And for those who want to look details, the array storing the `fft_ans` is structured as follows.
 
 
@@ -62,6 +79,8 @@ In order to plot the FFT results with frequency on the horizontal axis and Fouri
 
 **The FFT in this program uses the FFTW package, the algorithm of which can be found on the [official website](https://juliamath.github.io/FFTW.jl/latest/index.html). Note that the period of the Fourier transform is taken as [0:2pi)**
 
-## Calculate Configurational Entropy
+<a id="anchor4"></a>
+
+## 4. Calculate Configurational Entropy
 After following the above steps, if you run the program in a straightforward manner, fft_ans will be passed to `CE(<fft_ans>)` as an argument, and CE will be calculated. Then the CE for each parameter is saved in file.txt and plotted at the same time.
 ![](images/2021-12-10-17-39-15.png)

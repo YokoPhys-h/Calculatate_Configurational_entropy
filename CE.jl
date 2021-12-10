@@ -1,6 +1,11 @@
 #####################################################################
 # FUNCTIONS
 #####################################################################
+#If you have not installed the following packages of julia, please do the following
+using Pkg
+Pkg.add("FFTW")
+Pkg.add("Plots")
+
 ## Packages
 using FFTW
 using Plots

@@ -41,7 +41,7 @@ Then, input the **full path** of the data into the `input_file function("C:\\hog
 
 ![](images/2021-12-10-16-49-12.png)
 
-## Calculate Fast Fourier Trance Formation
+## Calculate Fast Fourier TransForm
 To calculate FFT, Enter test or test_d into the `fft(<test or test_d>)` function. And for those who want to look details, the array storing the `fft_ans` is structured as follows.
 
 
